@@ -13,6 +13,7 @@ export class HysComponent implements OnInit {
 
   constructor(private skillS: SkillService, private tokenService: TokenService) { }
   isLogged = false;
+  isAdmin = false;
 
   ngOnInit(): void {
     this.cargarSkills();
@@ -20,6 +21,11 @@ export class HysComponent implements OnInit {
       this.isLogged = true;
     } else {
       this.isLogged = false;
+    }
+    if(this.tokenService.getAuthorities().includes('ROLE_ADMIN')){
+      this.isAdmin = true; 
+    } else {
+      this.isAdmin = false;
     }
   }
 
