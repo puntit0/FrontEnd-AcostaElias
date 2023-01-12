@@ -1,28 +1,54 @@
-<div class="container">
-    <div class="row">
-        <div>
-            <form (ngSubmit)="onCreate()" novalidate #f="ngForm">
+<div class="fondo vh-100">
+  <div class="container align-items-center h-100">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+        <div class="card bg-light text-black" style="border-radius: 1rem">
+          <div class="card-body p-5 text-center">
+            <div>
+              <form (ngSubmit)="onCreate()" novalidate #f="ngForm">
                 <div class="form-group">
-                    <label for="nombreE">nombre del proyecto</label>
-                    <input type="text" class="form-control" id="nombre" name="nombre" [(ngModel)]="nombre" required>
+                  <label for="nombreE">nombre del proyecto</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="nombre"
+                    name="nombre"
+                    [(ngModel)]="nombre"
+                    required
+                  />
                 </div>
                 <div class="form-group">
-                    <label for="descripcion">descripcion del proyecto</label>
-                    <input type="text" class="form-control" id="descripcion" name="descripcion" [(ngModel)]="descripcion" required>
+                  <label for="descripcion">descripcion del proyecto</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="descripcion"
+                    name="descripcion"
+                    [(ngModel)]="descripcion"
+                    required
+                  />
                 </div>
                 <div class="form-group">
-                    <label for="img">imagen proyecto</label>
-                    <input type="file" class="form-control" id="img" name="img"  (change)="uploadImage($event)"
-                    accept=".jpg, .jpeg, .png">
+                  <label for="img">imagen proyecto</label>
+                  <input
+                    type="file"
+                    class="form-control"
+                    id="img"
+                    name="img"
+                    (change)="uploadImage($event)"
+                    accept=".jpg, .jpeg, .png"
+                  />
                 </div>
 
                 <div class="imagen">
-                    <img [src]="img" width="200px">
+                  <img [src]="img" width="200px" />
                 </div>
-                <button class="btn btn-primary">
-                    agregar proyecto
-                </button>
-            </form>
+                <button class="btn btn-primary">agregar proyecto</button>
+              </form>
+            </div>
+          </div>
         </div>
+      </div>
     </div>
+  </div>
 </div>

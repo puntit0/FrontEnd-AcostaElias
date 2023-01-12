@@ -1,19 +1,39 @@
-<div class="container" *ngIf="skill">
-    <div class="row">
-        <div>
-            <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
+<div class="fondo vh-100">
+  <div class="container align-items-center h-100" *ngIf="skill">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+        <div class="card bg-light text-black" style="border-radius: 1rem">
+          <div class="card-body p-5 text-center">
+            <div>
+              <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
                 <div class="form-group">
-                    <label for="nombre">nombre de la skill</label>
-                    <input type="text" class="form-control" id="nombre" name="nombre" [(ngModel)]="skill.nombre" required>
+                  <label for="nombre">nombre de la skill</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="nombre"
+                    name="nombre"
+                    [(ngModel)]="skill.nombre"
+                    required
+                  />
                 </div>
                 <div class="form-group">
-                    <label for="porcentaje">ingrese el porcentaje</label>
-                    <input type="text" class="form-control" id="porcentaje" name="porcentaje" [(ngModel)]="skill.porcentaje" required>
+                  <label for="porcentaje">ingrese el porcentaje</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="porcentaje"
+                    name="porcentaje"
+                    [(ngModel)]="skill.porcentaje"
+                    required
+                  />
                 </div>
-                <button class="btn btn-primary">
-                    editar skill
-                </button>
-            </form>
+                <button class="btn btn-primary">editar skill</button>
+              </form>
+            </div>
+          </div>
         </div>
+      </div>
     </div>
+  </div>
 </div>
